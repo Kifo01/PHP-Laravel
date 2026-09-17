@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/Applications/MAMP/htdocs/PHP-Laravel/phpunit.dist.xml" tests="9" assertions="19" errors="0" failures="0" skipped="0" time="0.043430">
+    <testsuite name="App" tests="9" assertions="19" errors="0" failures="0" skipped="0" time="0.043430">
+      <testsuite name="ExampleDatabaseTest" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/database/ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.023953">
+        <testcase name="testModelFindAll" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/database/ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.021779"/>
+        <testcase name="testSoftDeleteLeavesRow" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/database/ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.002174"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\PosPagesTest" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/feature/PosPagesTest.php" tests="4" assertions="12" errors="0" failures="0" skipped="0" time="0.017444">
+        <testcase name="testHomePageLoads" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/feature/PosPagesTest.php" line="12" class="Tests\Feature\PosPagesTest" classname="Tests.Feature.PosPagesTest" assertions="2" time="0.012226"/>
+        <testcase name="testAboutPageLoads" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/feature/PosPagesTest.php" line="20" class="Tests\Feature\PosPagesTest" classname="Tests.Feature.PosPagesTest" assertions="2" time="0.001525"/>
+        <testcase name="testCustomerPageDisplaysStaticRecords" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/feature/PosPagesTest.php" line="28" class="Tests\Feature\PosPagesTest" classname="Tests.Feature.PosPagesTest" assertions="4" time="0.001856"/>
+        <testcase name="testUserPageDisplaysStaticRecords" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/feature/PosPagesTest.php" line="38" class="Tests\Feature\PosPagesTest" classname="Tests.Feature.PosPagesTest" assertions="4" time="0.001837"/>
+      </testsuite>
+      <testsuite name="ExampleSessionTest" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/session/ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000609">
+        <testcase name="testSessionSimple" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/session/ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.000609"/>
+      </testsuite>
+      <testsuite name="HealthTest" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/unit/HealthTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.001424">
+        <testcase name="testIsDefinedAppPath" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/unit/HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.000270"/>
+        <testcase name="testBaseUrlHasBeenSet" file="/Applications/MAMP/htdocs/PHP-Laravel/tests/unit/HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="2" time="0.001154"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
