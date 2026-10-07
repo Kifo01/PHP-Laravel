@@ -1,6 +1,6 @@
 # Northstar POS Foundations
 
-Northstar is a four-page Point-of-Sale foundation built with CodeIgniter 4. It demonstrates explicit routing, MVC controller and view separation, a shared layout, and temporary account records stored in static PHP arrays.
+Northstar is a four-page Point-of-Sale foundation built with CodeIgniter 4. It demonstrates explicit routing, MVC controller and view separation, a shared layout, and account records retrieved from a MySQL database.
 
 ## Pages
 
@@ -9,7 +9,7 @@ Northstar is a four-page Point-of-Sale foundation built with CodeIgniter 4. It d
 - `/customers` - customer names, email addresses, and phone numbers
 - `/users` - staff usernames, full names, and roles
 
-Customer and user records are intentionally stored in their controller methods for this first module. No database is required.
+Customer and user records are retrieved through CodeIgniter Models from the `northstar_pos` MySQL database.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Customer and user records are intentionally stored in their controller methods f
 ## Setup
 
 1. Install dependencies with `composer install`.
-2. Create `.env` if it is not present and set `app.baseURL` to the local project URL.
+2. Create `.env` if it is not present and configure the `northstar_pos` MySQL connection.
 3. Ensure `writable/` can be written by the web server.
 4. Point the web root to `public/`, or use the included root `.htaccess` when running the project under MAMP at `/PHP-Laravel/`.
 
@@ -44,8 +44,10 @@ Then visit `http://localhost:8080/`.
 ```text
 app/Config/Routes.php           Explicit routes for all four pages
 app/Controllers/Pages.php       Landing and about pages
-app/Controllers/Customers.php   Static customer records
-app/Controllers/Users.php       Static staff records
+app/Controllers/Customers.php   Customer database query
+app/Controllers/Users.php       User database query
+app/Models/CustomerModel.php    Customers table model
+app/Models/UserModel.php        Users table model
 app/Views/layouts/main.php      Shared navigation and page shell
 app/Views/pages/                Landing and about views
 app/Views/customers/            Customer listing view
@@ -70,4 +72,4 @@ composer test
 
 ## Next Module
 
-The static arrays can later be moved into database tables and CodeIgniter models without changing the public page structure.
+Export the `northstar_pos` database from phpMyAdmin and include the resulting SQL file with the repository submission.

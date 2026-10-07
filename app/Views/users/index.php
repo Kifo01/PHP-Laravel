@@ -7,16 +7,16 @@
 </section>
 
 <section class="table-section" aria-labelledby="user-list-title">
-    <div class="section-heading"><div><p class="eyebrow">Staff list</p><h2 id="user-list-title">Team access</h2></div><span class="data-note">Temporary PHP array</span></div>
+    <div class="section-heading"><div><p class="eyebrow">Staff list</p><h2 id="user-list-title">Team access</h2></div><span class="data-note">MySQL database</span></div>
     <div class="table-wrap">
         <table>
-            <thead><tr><th scope="col">Username</th><th scope="col">Full name</th><th scope="col">Role</th></tr></thead>
+            <thead><tr><th scope="col">Username</th><th scope="col">Full name</th><th scope="col">Created at</th></tr></thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
                         <td data-label="Username"><code><?= esc($user['username']) ?></code></td>
-                        <td data-label="Full name"><span class="person-cell"><span class="initials initials--blue" aria-hidden="true"><?= esc(strtoupper(substr($user['fullName'], 0, 1))) ?></span><strong><?= esc($user['fullName']) ?></strong></span></td>
-                        <td data-label="Role"><span class="role-badge"><?= esc($user['role']) ?></span></td>
+                        <td data-label="Full name"><span class="person-cell"><span class="initials initials--blue" aria-hidden="true"><?= esc(strtoupper(substr($user['full_name'], 0, 1))) ?></span><strong><?= esc($user['full_name']) ?></strong></span></td>
+                        <td data-label="Created at"><span class="role-badge"><?= esc(date('M j, Y', strtotime($user['created_at']))) ?></span></td>
                     </tr>
                 <?php endforeach ?>
             </tbody>

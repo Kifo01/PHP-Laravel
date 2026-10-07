@@ -11,8 +11,8 @@
 </section>
 
 <section class="metrics" aria-label="System summary">
-    <article class="metric-card metric-card--green"><p>Customer accounts</p><strong>6</strong><a href="<?= site_url('customers') ?>">View directory <span aria-hidden="true">&rarr;</span></a></article>
-    <article class="metric-card metric-card--blue"><p>User accounts</p><strong>6</strong><a href="<?= site_url('users') ?>">View staff <span aria-hidden="true">&rarr;</span></a></article>
+    <article class="metric-card metric-card--green"><p>Customer accounts</p><strong><?= esc($customerCount) ?></strong><a href="<?= site_url('customers') ?>">View directory <span aria-hidden="true">&rarr;</span></a></article>
+    <article class="metric-card metric-card--blue"><p>User accounts</p><strong><?= esc($userCount) ?></strong><a href="<?= site_url('users') ?>">View staff <span aria-hidden="true">&rarr;</span></a></article>
     <article class="metric-card metric-card--gold"><p>Application pages</p><strong>4</strong><a href="<?= site_url('about') ?>">About this build <span aria-hidden="true">&rarr;</span></a></article>
 </section>
 
