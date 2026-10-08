@@ -32,6 +32,7 @@ final class PosPagesTest extends CIUnitTestCase
             'id' => ['type' => 'INTEGER', 'auto_increment' => true],
             'username' => ['type' => 'TEXT'],
             'full_name' => ['type' => 'TEXT'],
+            'avatar' => ['type' => 'TEXT', 'null' => true],
             'created_at' => ['type' => 'TEXT'],
         ]);
         $forge->addKey('id', true);
@@ -82,5 +83,27 @@ final class PosPagesTest extends CIUnitTestCase
         $result->assertSee('User Accounts');
         $result->assertSee('admin.vmarquez');
         $result->assertSee('Rafael Ramos');
+    }
+
+    public function testCustomerCreateAndEditPagesLoad(): void
+    {
+        $newPage = $this->get('/customers/new');
+        $editPage = $this->get('/customers/1/edit');
+
+        $newPage->assertOK();
+        $newPage->assertSee('Add Customer');
+        $editPage->assertOK();
+        $editPage->assertSee('Angela Reyes');
+    }
+
+    public function testUserCreateAndEditPagesLoad(): void
+    {
+        $newPage = $this->get('/users/new');
+        $editPage = $this->get('/users/1/edit');
+
+        $newPage->assertOK();
+        $newPage->assertSee('Add User');
+        $editPage->assertOK();
+        $editPage->assertSee('Avatar (JPG or PNG, max 2 MB)');
     }
 }

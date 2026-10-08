@@ -12,6 +12,8 @@ Health
 Pos Pages (Tests\Feature\PosPages)
  [x] Home page loads
  [x] About page loads
- [x] Customer page displays static records
- [x] User page displays static records
+ [x] Customer page displays database records
+ [x] User page displays database records
+ [x] Customer create and edit pages load
+ [x] User create and edit pages load
 
